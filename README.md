@@ -3,8 +3,8 @@
 Welcome to my Marvel Characters project! This project was built using React, Sass, Jest, and React Testing Library to create an interactive web application that allows users to explore and search for Marvel characters.
 
 <p float="left">
-  <img src="https://github.com/VERRibeiro/marvel-characters/assets/25716858/8781337c-210a-4629-8654-e659009b14e4" width="400" height="400" />
-  <img src="https://github.com/VERRibeiro/marvel-characters/assets/25716858/dd40346a-c51c-4079-baf4-9f9f18b354b5" width="600" height="400" />
+  <img src="https://github.com/VERRibeiro/marvel-characters/assets/25716858/8781337c-210a-4629-8654-e659009b14e4" width="300" height="300" />
+  <img src="https://github.com/VERRibeiro/marvel-characters/assets/25716858/dd40346a-c51c-4079-baf4-9f9f18b354b5" width="500" height="300" />
 </p>
 
 # Table of Contents
