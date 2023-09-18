@@ -1,0 +1,82 @@
+@import '../../variables.scss';
+.homeContainer {
+    background-color: white;
+    width:100%;
+    margin: 0 auto;
+}
+.homeTitle{
+    font-size: 40px;
+    @media screen and (max-width: $tablet) {
+        /* Additional styles for .showFavoritesButton at smaller screen sizes */
+        font-size: 20px;
+      }
+}
+.homeDescription{
+    font-size: 14px;
+    width: 80%;
+    margin: 15px auto;
+
+    @media screen and (max-width: $mobile) {
+        // width: 80%;
+        font-size: 12px;
+      }
+}
+.filterContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 88%;
+    margin: 0 auto;
+    // .resultQuantityText
+    @media screen and (max-width: $mobile) {
+        flex-direction: column-reverse;
+      }
+    .orderFavoriteContainer{
+        display: flex;
+        justify-content: space-between;
+        width: 500px;
+        @media screen and (max-width: $mobile) {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+          }
+    }
+}
+
+.favoritsContainer{
+    display: flex;
+    img{
+        margin-right: 10px;
+    }
+}
+.charactersContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+}
+.singleCharactersContainer{
+    width: 20%;
+    @media screen and (max-width: $desktop) {
+        /* Additional styles for .showFavoritesButton at smaller screen sizes */
+        width: 25%;
+      }
+    @media screen and (max-width: $tablet) {
+        /* Additional styles for .showFavoritesButton at smaller screen sizes */
+        width: 33%;
+      }
+    @media screen and (max-width: $mobile) {
+        /* Additional styles for .showFavoritesButton at smaller screen sizes */
+        width: 100%;
+      }
+    //   @media screen and (max-width: 600px) {
+    //     /* Additional styles for .showFavoritesButton at smaller screen sizes */
+    //     width: 100%;
+    //   }
+}
+
+.showFavoritesButton{
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    padding-top: 17px;
+}
