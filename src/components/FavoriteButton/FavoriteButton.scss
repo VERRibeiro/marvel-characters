@@ -1,0 +1,14 @@
+@import '../../variables.scss';
+
+.favoriteThumbnailButton{
+    border: none;
+    cursor: pointer;
+    background-color: white ;
+}
+
+.favoriteImage{
+    transition: transform 0.3s ease;
+}
+.favoriteImage:hover {
+    transform: scale(1.4); 
+}

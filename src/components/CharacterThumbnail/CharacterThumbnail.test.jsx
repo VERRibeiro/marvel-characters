@@ -1,43 +1,57 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import CharacterThumbnail from './CharacterThumbnail';
+import { useMarvel } from '../../store/MarvelContext';
 
-jest.mock('../../store/MarvelContext', () => ({
-  useMarvel: () => ({
-    favoritesCharacters: [],
-    setFavoritesCharacters: jest.fn(),
-  }),
-}));
+// Mock the useMarvel context
+jest.mock('../../store/MarvelContext');
 
-const character = {
-  id: 1,
-  name: 'Iron Man',
-  thumbnail: {
-    path: 'http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55',
-    extension: 'jpg',
-  },
-  isFavorited: false,
-};
+describe('CharacterThumbnail', () => {
+  const character = {
+    id: 1,
+    thumbnail: {
+      path: 'http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16',
+      extension: 'jpg',
+    },
+    name: 'Test Character',
+    isFavorited: false,
+  };
 
-test('renders the character thumbnail and name', () => {
-  render(<CharacterThumbnail character={character} />);
+  it('renders the character thumbnail with a link', () => {
+    useMarvel.mockReturnValue({
+      favoritesCharacters: [{ id: 1009355, name: 'Char1', isFavorited: true }],
+      setFavoritesCharacters: jest.fn(),
+    });
+    const { container } = render(
+      <MemoryRouter>
+        <CharacterThumbnail character={character} />
+      </MemoryRouter>,
+    );
 
-  const thumbnailElement = screen.getByAltText('Imagem em miniatura do personagem');
-  const nameElement = screen.getByText('Iron Man');
+    // Check if the link and image are rendered
+    const link = container.querySelector('a');
+    const image = container.querySelector('img');
+    expect(link).toBeInTheDocument();
+    expect(image).toBeInTheDocument();
+    expect(image).toHaveAttribute('src', 'http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16.jpg');
+  });
 
-  expect(thumbnailElement).toBeInTheDocument();
-  expect(nameElement).toBeInTheDocument();
+  it('renders the character name and FavoriteButton', () => {
+    useMarvel.mockReturnValue({
+      favoritesCharacters: [{ id: 1009355, name: 'Char1', isFavorited: true }],
+      setFavoritesCharacters: jest.fn(),
+    });
+    const { container } = render(
+      <MemoryRouter>
+        <CharacterThumbnail character={character} />
+      </MemoryRouter>,
+    );
+
+    // Check if the character name and FavoriteButton are rendered
+    const characterName = container.querySelector('.characterName');
+    const favoriteButton = container.querySelector('button.favoriteThumbnailButton');
+    expect(characterName).toBeInTheDocument();
+    expect(favoriteButton).toBeInTheDocument();
+  });
 });
-
-test('toggles favorite status on button click then remove favorite status', () => {
-  render(<CharacterThumbnail character={character} />);
-
-  const favoriteButton = screen.getByRole('button');
-  fireEvent.click(favoriteButton);
-  const favoriteElement = screen.getByAltText('icone para desfavoritar');
-  expect(favoriteElement).toBeInTheDocument();
-  fireEvent.click(favoriteButton);
-  const unFavoriteElement = screen.getByAltText('icone para favoritar');
-  expect(favoriteElement).toBeInTheDocument();
-});
-

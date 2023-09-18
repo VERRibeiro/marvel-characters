@@ -1,0 +1,34 @@
+@import '../../variables.scss';
+.characterThumbnailContainer{
+    margin: 10px 12px;
+    @media screen and (max-width: $mobile) {
+        width: 80%;
+        margin: 0 auto;
+      }
+}
+
+.thumbnail{
+    width: 100%;
+    height: 250px;
+    border-bottom: 3px solid red;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        height: 400px;
+      }
+}
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.characterNameContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.characterName {
+    font-size: 14px;
+    color: black;
+}
