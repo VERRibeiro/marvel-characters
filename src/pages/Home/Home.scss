@@ -7,7 +7,6 @@
 .homeTitle{
     font-size: 40px;
     @media screen and (max-width: $tablet) {
-        /* Additional styles for .showFavoritesButton at smaller screen sizes */
         font-size: 20px;
       }
 }
@@ -17,7 +16,6 @@
     margin: 15px auto;
 
     @media screen and (max-width: $mobile) {
-        // width: 80%;
         font-size: 12px;
       }
 }
@@ -26,7 +24,7 @@
     justify-content: space-between;
     width: 88%;
     margin: 0 auto;
-    // .resultQuantityText
+
     @media screen and (max-width: $mobile) {
         flex-direction: column-reverse;
       }
@@ -56,22 +54,15 @@
 }
 .singleCharactersContainer{
     width: 20%;
-    @media screen and (max-width: $desktop) {
-        /* Additional styles for .showFavoritesButton at smaller screen sizes */
+    @media screen and (max-width: $desktop) {        
         width: 25%;
       }
-    @media screen and (max-width: $tablet) {
-        /* Additional styles for .showFavoritesButton at smaller screen sizes */
+    @media screen and (max-width: $tablet) {        
         width: 33%;
       }
     @media screen and (max-width: $mobile) {
-        /* Additional styles for .showFavoritesButton at smaller screen sizes */
         width: 100%;
       }
-    //   @media screen and (max-width: 600px) {
-    //     /* Additional styles for .showFavoritesButton at smaller screen sizes */
-    //     width: 100%;
-    //   }
 }
 
 .showFavoritesButton{

@@ -12,7 +12,6 @@ function FavoriteButton({ character }) {
 
   const toggleFavorite = useCallback(() => {
     if (!isFavorited) {
-      console.log('favorites', JSON.stringify(favoritesCharacters));
       if (favoritesCharacters.length < QTY_LIMIT_FAVORITE) {
         setFavoritesCharacters([...favoritesCharacters, { ...character, isFavorited: true }]);
         setIsFavorited(!isFavorited);

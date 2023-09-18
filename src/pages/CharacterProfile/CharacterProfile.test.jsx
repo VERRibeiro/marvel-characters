@@ -65,7 +65,6 @@ describe('CharacterProfile', () => {
 
     const { getByText, getByAltText } = render(
       <MemoryRouter initialEntries={['/profile?cid=1']}>
-        {/* Wrap your Route component inside a Routes component */}
         <Routes>
           <Route path="/profile" element={<CharacterProfile />} />
         </Routes>

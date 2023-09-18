@@ -62,8 +62,8 @@ function Home() {
 
   return (
     <div className="homeContainer">
-      <img src={logo} alt="" />
-      <h1 className="homeTitle">EXPLORE O UNIVERSO</h1>
+      <img src={logo} alt="Logo da Marvel" />
+      <h1 className="homeTitle" data-testid="cypress-title">EXPLORE O UNIVERSO</h1>
       <p className="homeDescription">
         mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama -
         e aqueles que você descobrirá em breve!
@@ -81,9 +81,9 @@ function Home() {
               onClick={toggleFavorite}
               className="showFavoritesButton"
             >
-              <img src={showFavorites ? favoritOn : favoritOff} alt="" />
+              <img src={showFavorites ? favoritOn : favoritOff} alt="botão para mostrar personagens favoritos" />
             </div>
-            <p className="resultQuantityText">Somente favoritos</p>
+            <p className="onlyFavorites">Somente favoritos</p>
           </div>
         </div>
       </div>

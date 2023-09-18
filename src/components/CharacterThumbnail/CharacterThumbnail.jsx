@@ -8,7 +8,11 @@ function CharacterThumbnail({ character }) {
   return (
     <div className="characterThumbnailContainer">
       <Link to={`/characters?cid=${character.id}`}>
-        <img src={`${character.thumbnail?.path}.${character.thumbnail?.extension}`} alt="Imagem em miniatura do personagem" className="thumbnail" />
+        <img
+          src={`${character.thumbnail?.path}.${character.thumbnail?.extension}`}
+          alt={`Imagem em miniatura do personagem ${character.name}`}
+          className="thumbnail"
+        />
       </Link>
       <div className="characterNameContainer">
         <h2 className="characterName">{character.name}</h2>
