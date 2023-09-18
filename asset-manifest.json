@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marvel-characters/static/css/main.9d7ba8d4.css",
-    "main.js": "/marvel-characters/static/js/main.abf98edd.js",
+    "main.js": "/marvel-characters/static/js/main.1f776458.js",
     "static/js/787.35969865.chunk.js": "/marvel-characters/static/js/787.35969865.chunk.js",
     "static/media/logo.svg": "/marvel-characters/static/media/logo.66aae77137a240c352d25d571db83759.svg",
     "static/media/logo_menor.svg": "/marvel-characters/static/media/logo_menor.55b92de41d1c81beaa69f33d1e167acd.svg",
@@ -14,11 +14,11 @@
     "static/media/favorito_01.svg": "/marvel-characters/static/media/favorito_01.4032fb6a35d9a756a3b67961522b5f0f.svg",
     "index.html": "/marvel-characters/index.html",
     "main.9d7ba8d4.css.map": "/marvel-characters/static/css/main.9d7ba8d4.css.map",
-    "main.abf98edd.js.map": "/marvel-characters/static/js/main.abf98edd.js.map",
+    "main.1f776458.js.map": "/marvel-characters/static/js/main.1f776458.js.map",
     "787.35969865.chunk.js.map": "/marvel-characters/static/js/787.35969865.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d7ba8d4.css",
-    "static/js/main.abf98edd.js"
+    "static/js/main.1f776458.js"
   ]
 }
