@@ -1,0 +1,46 @@
+.orderByNamecontainer
+    display: flex
+    justify-content: space-between
+    width: 18rem
+    color: red
+.heroIcon
+  width: 20px
+.toggleButton
+  border: none
+  width: 60px
+  height: 30px
+.toggleSwitch
+  margin-top: 10px
+  width: 60px
+  height: 30px
+  background-color: #ccc
+  border-radius: 15px
+  position: relative
+  cursor: pointer
+  &.on
+    background-color: #ff9c9c
+  &.off
+    background-color: #ccc
+  .slider 
+    width: 20px
+    height: 20px
+    margin-top: 5px
+    margin-left: 5px
+    background-color: red
+    border-radius: 50%
+    position: absolute
+    top: 0
+    transition: transform 0.3s ease-in-out
+    display: flex
+    align-items: center
+    justify-content: center
+
+    img 
+      width: 20px
+      height: 20px
+  &.on .slider 
+    transform: translateX(30px)
+
+  &.off .slider 
+    transform: translateX(0)
+  
