@@ -1,0 +1,116 @@
+@import '../../variables.scss';
+.characterProfileContainer {
+    background-color: white;
+    width:80%;
+    margin: 0 auto;
+    padding: 20px 40px;
+    h2{
+        font-size: 30px;
+        text-align: left;
+    }
+}
+.characterProfileHeader{
+    display: flex;
+    margin-bottom: 40px;
+}
+.characterInfoPosterContainer{
+    display: flex;
+}
+
+.characterInfoContainer{
+    width: 40%;
+    margin-right: 30px;
+}
+
+
+.characterNameContainer {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.characterName {
+    color: black;
+}
+
+.favoriteThumbnailButton{
+    border: none;
+    cursor: pointer;
+    background-color: white ;
+}
+
+.characterDescprition{
+    text-align: left;
+    font-size: 16px;
+}
+
+.comicsAndMovies{
+    display: flex;
+    justify-content: space-between;
+    p {
+        font-size: 12px;
+    }
+}
+
+.comicsAndMoviesDetails{
+    text-align: left;
+}
+
+.comicsAndMoviesImageContainer{
+    display: flex;
+    justify-content: space-between;
+    img {
+        width: 25px;
+        margin-right: 15px;
+    }
+}
+
+.ratingContainer{
+    text-align: left;
+    display: flex;
+    p{
+        margin-right: 12px;
+        font-weight: bold;
+    }
+}
+
+.lastModifiedContainer {
+    text-align: left;
+    display: flex;
+    p{
+        margin-right: 12px;
+    }
+}
+
+.characterPoster{
+    width: 50%;
+    padding: 0 20px;
+    img{
+        width: 100%;
+    }
+}
+
+.comicsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    h3{
+        font-size: 12px;
+    }
+}
+
+.comicThumbnailContainer{
+    width: 110px;
+    margin: 10px 12px;
+    text-align: left;
+    @media screen and (max-width: $mobile) {
+        width: 150px;
+      }
+}
+.comicThumbnail{
+    width: 100px;
+    height: 125px;
+    @media screen and (max-width: $mobile) {
+        width: 150px;
+        height: 180px;
+      }
+}
